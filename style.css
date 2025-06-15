@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --bg: #f7f7f7;
+  --text: #181818;
+  --accent: #4f8cff;
+  --sidebar-bg: #fff;
+  --card-bg: #f0f0f0;
+  --border: #e0e0e0;
+  --avatar-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+body.dark {
+  --bg: #181a1b;
+  --text: #f7f7f7;
+  --accent: #4f8cff;
+  --sidebar-bg: #23272a;
+  --card-bg: #23272a;
+  --border: #333;
+  --avatar-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.sidebar {
+  background: var(--sidebar-bg);
+  padding: 40px 32px;
+  min-width: 320px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid var(--border);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--avatar-shadow);
+  margin-bottom: 24px;
+}
+
+.sidebar h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.sidebar h1 span {
+  font-weight: 400;
+}
+.sidebar h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+.contacts,
+.skills {
+  width: 100%;
+  margin-bottom: 32px;
+}
+.contacts h3,
+.skills h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.contacts ul,
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contacts li,
+.skills li {
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+}
+.contacts a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.contacts a:hover {
+  color: var(--accent);
+}
+.skills h4 {
+  margin: 12px 0 4px 0;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile h3,
+.experience h3,
+.education h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.profile p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.experience .job {
+  margin-bottom: 24px;
+}
+.experience .job h4 {
+  font-size: 1.08rem;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+.experience .job h4 span {
+  font-weight: 400;
+  color: var(--accent);
+  margin-left: 8px;
+}
+.experience .period {
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+  display: block;
+}
+.experience ul {
+  margin: 0 0 0 18px;
+  padding: 0;
+  font-size: 0.98rem;
+}
+.education ul {
+  margin: 0 0 0 18px;
+  padding: 0;
+  font-size: 0.98rem;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: var(--sidebar-bg);
+  color: var(--accent);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: background 0.2s, color 0.2s;
+  z-index: 10;
+}
+#theme-toggle:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    max-width: 98vw;
+  }
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 8px;
+    gap: 0;
+  }
+  .main-content {
+    padding: 20px 8px;
+  }
+  #theme-toggle {
+    top: 12px;
+    right: 12px;
+  }
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+  .sidebar h1 {
+    font-size: 1.5rem;
+  }
+  .sidebar h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .sidebar {
+    padding: 12px;
+  }
+  .main-content {
+    padding: 8px 2vw;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+  }
+  #theme-toggle {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+}
