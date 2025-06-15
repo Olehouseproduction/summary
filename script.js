@@ -24,9 +24,34 @@ toggleBtn.addEventListener("click", () => {
 // Установить текущий год
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Счётчик просмотров через countapi.xyz
-fetch("https://api.countapi.xyz/hit/olehouseproduction/resume")
-  .then((res) => res.json())
-  .then((data) => {
-    document.getElementById("view-count").textContent = data.value;
-  });
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyAjpoXKt0QvoLNNObOdhEO0LbZZPUZ3QQk",
+  authDomain: "cv-olehouseproduction.firebaseapp.com",
+  databaseURL: "https://cv-olehouseproduction-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "cv-olehouseproduction",
+  storageBucket: "cv-olehouseproduction.firebasestorage.app",
+  messagingSenderId: "228991653336",
+  appId: "1:228991653336:web:d0e0cf9bbf4b54c9d94ead",
+};
+
+// Инициализация
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// Счётчик просмотров
+const viewCountEl = document.getElementById("view-count");
+if (viewCountEl) {
+  const counterRef = db.ref("views/resume");
+
+  counterRef
+    .transaction((currentValue) => {
+      return (currentValue || 0) + 1;
+    })
+    .then((result) => {
+      viewCountEl.textContent = result.snapshot.val();
+    })
+    .catch((error) => {
+      console.error("Ошибка Firebase:", error);
+    });
+}
