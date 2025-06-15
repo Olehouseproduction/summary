@@ -182,6 +182,32 @@ body {
   color: #fff;
 }
 
+.footer {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+.footer__icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer__icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+}
+
+.footer__icons a:hover img {
+  transform: scale(1.2);
+}
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;

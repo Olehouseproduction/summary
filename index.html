@@ -3,9 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Олехнович
+Олеся Frontend-разработчик" />
+    <meta
+      property="og:description"
+      content="
+Работаю фултайм, открыта к дополнительной занятости. Готова браться за любые задачи в рамках моих компетенций. Особенно интересна работа с вёрсткой." />
+    <meta property="og:image" content="https://olehouseproduction.ru/img/photo-of-olesia.webp" />
+    <meta property="og:url" content="https://olehouseproduction.ru/" />
     <title>Олехнович Олеся — Frontend-разработчик</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/flaticon.png" type="image/png" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(102550380, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/102550380" style="position: absolute; left: -9999px" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <div class="container">
@@ -60,9 +105,10 @@
         <section class="profile">
           <h3>О себе</h3>
           <p>
-            Ищу позицию junior фронтенд-разработчика. Готова начать с&nbsp;базовых задач в&nbsp;указанном стеке
-            технологий, с&nbsp; последующим развитием. Не&nbsp;боюсь рутины. Ценю хорошие отношения в&nbsp;команде
-            и&nbsp;стремлюсь к&nbsp;сотрудничеству. Хочу работать под руководством опытного наставника.
+            Работаю фултайм в&nbsp;отличной компании с&nbsp;замечательной командой. Ценю своих коллег и&nbsp;текущую
+            работу, но&nbsp;открыта к&nbsp;дополнительной занятости. Могу выделять 10&ndash;13 часов в&nbsp;неделю: час
+            по&nbsp;вечерам и&nbsp;несколько часов в&nbsp;выходные. Готова браться за&nbsp;любые задачи в&nbsp;рамках
+            моих компетенций. Особенно интересна работа с&nbsp;вёрсткой.
           </p>
         </section>
         <section class="experience">
@@ -90,7 +136,7 @@
                 Работа в отделе маркетинга. Написание рекламного контента, генерирование идей, сотрудничество с командой
               </li>
               <li>Изучение php и курса Разработчик Bitrix Framework</li>
-              <li>Освоение современных технологий ИИ для ускорения работы</li>
+              <li>Освоение современных технологий ИИ для ускорения работы (gpt open.ai, cursor)</li>
             </ul>
           </div>
           <div class="job">
@@ -150,18 +196,58 @@
           </div>
         </section>
         <section class="education">
-          <h3>Образование</h3>
+          <h3>Образование, курсы, семинары</h3>
           <ul>
+            <li>Вебинар. Тестировщик с нуля. А.Фадеева. Хекслет (2025)</li>
             <li>1С-Битрикс: Управление сайтом, Академия 1С-Битрикс, Контент-менеджер (2025)</li>
             <li>Основы вёрстки сайта: HTML и CSS, Нетология (2024)</li>
             <li>Основы Figma, Нетология (2024)</li>
             <li>Основы современной верстки, Хекслет (2023)</li>
-            <li>Южный федеральный университет, Факультет философии и культурологии, Преподаватель (2008)</li>
+            <li>The C# Programming Language. Starter. Александр Шевчук (2022)</li>
+            <li>Обучающий семинар с Н. Буценко по работе в соцсетях. Практика. Офлайн (Reels, TikTok)</li>
+            <li>Вебинар. Н. Буценко. Как работать во ВКонтакте в 2022 году (2022)</li>
+            <li>Обучающий семинар В.Касютина «Региональная пресса. Вопросы и ответы». Офлайн (2022)</li>
+            <li>
+              Интенсив «Текст на миллион. Введение в профессию копирайтера за 3 дня». Елизавета Кулачкова. Skillbox
+              (2022)
+            </li>
+            <li>Tilda для новичков. Д.Фимушкин (2022)</li>
+            <li>Обучающий семинар. TikTok. Камал Сатавов. Офлайн (2021)</li>
+            <li>GordiSchool, SMM-менеджер (2021)</li>
+            <li>Орловский государственный университет, кафедра религиоведения, аспирант (2018)</li>
+            <li>Южный федеральный университет, факультет философии и культурологии, преподаватель (2008)</li>
           </ul>
         </section>
       </main>
       <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
     </div>
+    <footer class="footer">
+      <div class="footer__top">
+        <p>
+          👁
+          <span id="view-count">–</span>
+          • &copy;
+          <span id="year"></span>
+        </p>
+      </div>
+      <div class="footer__icons">
+        <a href="https://t.me/frontFromScratch" target="_blank" aria-label="Telegram">
+          <img src="img/icons/icon-telegram.png" alt="Telegram" />
+        </a>
+        <a href="https://vk.com/id50253683" target="_blank" aria-label="VK">
+          <img src="img/icons/icon-vk.png" alt="VK" />
+        </a>
+        <a href="mailto:pachevaol@gmail.com" aria-label="Gmail">
+          <img src="img/icons/icon-gmail.png" alt="Gmail" />
+        </a>
+        <a href="https://www.youtube.com/channel/UClYc_2W5iDBtWUfahMSRKhQ" target="_blank" aria-label="YouTube">
+          <img src="img/icons/icon-youtube.png" alt="YouTube" />
+        </a>
+        <a href="https://github.com/Olehouseproduction" target="_blank" aria-label="GitHub">
+          <img src="img/icons/icon-github.png" alt="GitHub" />
+        </a>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
