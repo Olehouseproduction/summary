@@ -20,3 +20,13 @@ toggleBtn.addEventListener("click", () => {
   setTheme(isDark);
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
+
+// Установить текущий год
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Счётчик просмотров через countapi.xyz
+fetch("https://api.countapi.xyz/hit/olehouseproduction/resume")
+  .then((res) => res.json())
+  .then((data) => {
+    document.getElementById("view-count").textContent = data.value;
+  });
